@@ -3,6 +3,7 @@
 planning stuff goes in here
 
 ## Features
+- [ ] tracking (undo/redo, sync, etc)
 - [ ] multiplatform support
     - [ ] Windows
     - [ ] Mac
