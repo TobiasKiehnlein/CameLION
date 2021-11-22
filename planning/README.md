@@ -35,6 +35,7 @@ planning stuff goes in here
     - [ ] different pencils (pen, filler, MAYBE texture based)
     - [ ] different erasers (partial strokes, entire strokes)
     - [ ] nesting of geometric forms
+    - [ ] (grid) snapping (active snapping or no snapping with button)
 - [ ] ui
     - [ ] editor for geometric forms, uml like stuff
     - [ ] completely customizable user interface (support for different aspect ratios and screen sizes)
