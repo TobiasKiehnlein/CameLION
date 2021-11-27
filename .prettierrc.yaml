@@ -1,0 +1,4 @@
+overrides:
+  - files: "*.drawio"
+    options:
+      parser: xml

@@ -1,0 +1,12 @@
+#!/bin/sh
+echo Path: $PATH
+echo Home: $HOME
+PATH=$HOME/.yarn/bin:$PATH
+node --version
+yarn --version
+yarn global add prettier @prettier/plugin-xml
+for FILE in $(git diff --cached --name-only --diff-filter=ACM)
+do
+  echo Formatting: "$FILE"
+  (prettier --write "$FILE" && git add "$FILE") || echo "$FILE" could not be formatted by prettier # only process files that are supported by prettier
+done
