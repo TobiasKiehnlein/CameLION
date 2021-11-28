@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e # exit on error
 echo Path: $PATH
 echo Home: $HOME
 PATH=$HOME/.yarn/bin:$PATH
