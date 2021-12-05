@@ -1,0 +1,7 @@
+{
+	"name": "CameLION_UI",
+	"integrations": {
+		"capacitor": {}
+	},
+	"type": "react"
+}
