@@ -1,8 +1,9 @@
 {
-  "name": "build",
-  "version": "1.0.0",
-  "scripts": {
-    "setupUI": "node setupUI.js",
-    "setupWASM": "node setupWASM.js"
-  }
+	"name": "build",
+	"version": "1.0.0",
+	"scripts": {
+		"setupUI": "node setupUI.js",
+		"setupWASM": "node setupWASM.js",
+		"triggerRefresh": "node triggerRefresh.js"
+	}
 }
