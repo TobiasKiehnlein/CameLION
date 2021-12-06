@@ -11,9 +11,10 @@ static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 #[wasm_bindgen]
 extern {
     fn alert(s: &str);
+	fn customAlert(s: &str);
 }
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, came-lion-rust-web-gl!");
+    customAlert("Hello, came-lion-rust-web-gl!--");
 }

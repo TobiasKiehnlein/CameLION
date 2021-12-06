@@ -17,10 +17,5 @@
     "jsx": "react-jsx",
     "baseUrl": "./"
   },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "../CameLION_Rust_WebGl/pkg"
-    }
-  ]
+  "include": ["src"]
 }

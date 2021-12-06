@@ -6,6 +6,18 @@
       value="$USER_HOME$/.nvm/versions/node/v14.18.2/bin/node"
     />
     <envs />
-    <method v="2" />
+    <method v="2">
+      <option name="NpmBeforeRunTask" enabled="true">
+        <package-json value="$PROJECT_DIR$/.build/package.json" />
+        <command value="run" />
+        <scripts>
+          <script value="setupUI" />
+        </scripts>
+        <node-interpreter
+          value="$USER_HOME$/.nvm/versions/node/v14.18.2/bin/node"
+        />
+        <envs />
+      </option>
+    </method>
   </configuration>
 </component>

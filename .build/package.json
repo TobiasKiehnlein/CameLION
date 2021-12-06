@@ -1,0 +1,8 @@
+{
+  "name": "build",
+  "version": "1.0.0",
+  "scripts": {
+    "setupUI": "node setupUI.js",
+    "setupWASM": "node setupWASM.js"
+  }
+}
