@@ -1,6 +1,16 @@
 {
   "name": "camelion_ui",
   "version": "0.0.1",
+  "author": {
+    "name": "Tobias Kiehnlein",
+    "email": "tobias@kiehnlein.com"
+  },
+  "contributors": [
+    {
+      "name": "Peter Viechter",
+      "email": "zelberor@schnalzerbuam.de"
+    }
+  ],
   "private": true,
   "dependencies": {
     "@capacitor/app": "1.0.6",
