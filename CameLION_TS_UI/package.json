@@ -49,8 +49,8 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "craco start",
+    "build": "craco build",
     "link-hooks": "git config core.hooksPath .hooks"
   },
   "eslintConfig": {
@@ -72,8 +72,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "3.3.2",
-    "react-app-rewired": "^2.1.8",
-    "wasm-loader": "^1.3.0"
+    "@craco/craco": "^6.4.2",
+    "ts-node": "^10.4.0"
   },
   "description": "An Ionic project"
 }

@@ -1,6 +1,5 @@
-const magicValue = '0.8876060585320129';
+const magicValue = "0.7191912371970877";
 
 if (magicValue !== window.magicValue && window.magicValue) {
-	window.location.reload();
-	window.magicValue = magicValue;
+  window.magicValue = magicValue;
 }

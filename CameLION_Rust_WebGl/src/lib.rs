@@ -16,5 +16,5 @@ extern {
 
 #[wasm_bindgen]
 pub fn greet() {
-    customAlert("Hello, came-lion-rust-web-gl!--");
+    customAlert("Hello, came-lion-rust-web-gl!");
 }
