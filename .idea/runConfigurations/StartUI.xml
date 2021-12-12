@@ -1,9 +1,23 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="StartUI" type="js.build_tools.npm">
-    <package-json value="$PROJECT_DIR$/CameLION_UI/package.json" />
+    <package-json value="$PROJECT_DIR$/CameLION_TS_UI/package.json" />
     <command value="start" />
-    <node-interpreter value="project" />
+    <node-interpreter
+      value="$USER_HOME$/.nvm/versions/node/v14.18.2/bin/node"
+    />
     <envs />
-    <method v="2" />
+    <method v="2">
+      <option name="NpmBeforeRunTask" enabled="true">
+        <package-json value="$PROJECT_DIR$/.build/package.json" />
+        <command value="run" />
+        <scripts>
+          <script value="setupUI" />
+        </scripts>
+        <node-interpreter
+          value="$USER_HOME$/.nvm/versions/node/v14.18.2/bin/node"
+        />
+        <envs />
+      </option>
+    </method>
   </configuration>
 </component>
