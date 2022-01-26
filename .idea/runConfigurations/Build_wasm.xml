@@ -1,6 +1,9 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Build wasm" type="ShConfigurationType">
-    <option name="SCRIPT_TEXT" value="cd CameLION_Rust_WebGl; wasm-pack build; cd ../.build; yarn triggerRefresh" />
+    <option
+      name="SCRIPT_TEXT"
+      value="cd CameLION_Rust_WebGl; wasm-pack build --target web; cd ../.build; yarn triggerRefresh"
+    />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />
     <option name="SCRIPT_OPTIONS" value="" />
@@ -19,7 +22,9 @@
         <scripts>
           <script value="setupWASM" />
         </scripts>
-        <node-interpreter value="$USER_HOME$/.nvm/versions/node/v14.18.2/bin/node" />
+        <node-interpreter
+          value="$USER_HOME$/.nvm/versions/node/v14.18.2/bin/node"
+        />
         <envs />
       </option>
     </method>

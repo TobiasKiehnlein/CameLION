@@ -1,23 +1,22 @@
-import { FC, useState } from 'react';
-import { IonButton, IonIcon } from '@ionic/react';
+import { Children, FC, useState } from "react";
+import { Button } from "@mui/material";
 
 interface Props {
-	icons: string[],
-	onChange: (icon: string) => any,
-	defaultValue?: string
+  onChange: (icon: string) => any;
 }
 
-export const IconToggle: FC<Props> = ({ icons, onChange, defaultValue }) => {
-	console.assert(icons.length > 1, 'Provide at least two Icons');
-	const [ currentIcon, setCurrentIcon ] = useState<string>(defaultValue ?? icons[0]);
-	
-	const onIconClick = () => {
-		const currentIndex = icons.indexOf(currentIcon);
-		const newIcon = icons[(currentIndex + 1) % icons.length];
-		console.log(newIcon);
-		setCurrentIcon(newIcon);
-		onChange(newIcon);
-	};
-	
-	return <IonButton onClick={ onIconClick }><IonIcon icon={ currentIcon }/></IonButton>;
+export const IconToggle: FC<Props> = ({ children, onChange }) => {
+  const childList = Children.toArray(children);
+  console.assert(childList.length > 1, "Provide at least two Icons");
+  const [currentIcon, setCurrentIcon] = useState<any>(childList[0]);
+
+  const onIconClick = () => {
+    const currentIndex = childList.indexOf(currentIcon);
+    const newIcon = childList[(currentIndex + 1) % childList.length];
+    console.log(newIcon);
+    setCurrentIcon(newIcon);
+    onChange("changed");
+  };
+
+  return <Button onClick={onIconClick}>{currentIcon}</Button>;
 };

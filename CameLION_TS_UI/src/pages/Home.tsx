@@ -1,61 +1,224 @@
-import { IonButton, IonButtons, IonContent, IonHeader, IonItem, IonLabel, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import './Home.scss';
-import React from 'react';
-import { IconToggle } from '../components/IconToggle';
-import { apps, list } from 'ionicons/icons';
+import "./Home.scss";
+import React from "react";
+import { IconToggle } from "../components/IconToggle";
+import { AppsRounded, ListRounded } from "@mui/icons-material";
+import { Button } from "@mui/material";
 
-const Toolbar = () =>
-	<>
-		<IonTitle>CameLION - Home</IonTitle>
-		<IonButtons slot={ 'end' }>
-			<IonButton>Open</IonButton>
-			<IconToggle icons={ [ list, apps ] } onChange={ console.log }/>
-		</IonButtons>
-	</>;
+const Toolbar = () => (
+  <>
+    <span>CameLION - Home</span>
+    <div>
+      <Button>Open</Button>
+      <IconToggle onChange={console.log}>
+        <ListRounded />
+        <AppsRounded />
+      </IconToggle>
+    </div>
+  </>
+);
 
 const Home: React.FC = () => {
-	return (
-		<IonPage>
-			<IonHeader>
-				<IonToolbar>
-					<Toolbar/>
-				</IonToolbar>
-			</IonHeader>
-			<IonContent fullscreen>
-				<IonHeader collapse='condense'>
-					<IonToolbar>
-						<IonTitle>CameLION - Home</IonTitle>
-					
-					</IonToolbar>
-				</IonHeader>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-				<IonItem><IonLabel>Test</IonLabel></IonItem>
-			</IonContent>
-		</IonPage>
-	);
+  return (
+    <div>
+      <div>
+        <Toolbar />
+      </div>
+      <div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+        <div>Test</div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;

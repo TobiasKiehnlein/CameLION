@@ -10,6 +10,7 @@
 
 # production
 /build
+/dist
 
 # misc
 package-lock.json
@@ -27,3 +28,6 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
+
+# Parcel cache
+/.parcel-cache
