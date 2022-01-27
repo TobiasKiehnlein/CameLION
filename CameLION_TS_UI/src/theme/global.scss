@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  contain: layout size style;
+
+  #header {
+	padding: 20px;
+	background-color: var(--ion-color-light);
+  }
+
+  #page {
+	overflow: auto;
+	flex-basis: 0;
+	flex-grow: 1;
+	flex-shrink: 1;
+	height: 100%;
+	padding: 10px;
+  }
+
+  #footer {
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
+	background-color: var(--ion-color-light);
+
+	a {
+	  display: flex;
+	  align-items: center;
+	  flex-direction: column;
+	  justify-content: center;
+	  text-decoration: none;
+	  color: var(--ion-color-light-contrast);
+	}
+  }
+}

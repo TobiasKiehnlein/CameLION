@@ -1,33 +1,39 @@
-import { BrowserRouter as Router, Link, Routes } from "react-router-dom";
-import React from "react";
-import Home from "./pages/Home";
-import Tab2 from "./pages/Tab2";
-import Tab3 from "./pages/Tab3";
+import { BrowserRouter as Router, Link, Routes } from 'react-router-dom';
+import React from 'react';
+import Home from './pages/Home';
+import Tab2 from './pages/Tab2';
+import Tab3 from './pages/Tab3';
 
 /* Theme variables */
-import "./theme/variables.scss";
-import { Navigate, Route } from "react-router";
-import { CakeRounded, HomeMax, Icecream } from "@mui/icons-material";
+import './theme/variables.scss';
+import './theme/global.scss';
+import { Navigate, Route } from 'react-router';
+import { CakeRounded, HomeMax, Icecream } from '@mui/icons-material';
 
 const App: React.FC = () => (
   <>
     <Router>
-      <Routes>
-        <Route path="/Home" element={<Home />} />
-        <Route path="/tab2" element={<Tab2 />} />
-        <Route path="/tab3" element={<Tab3 />} />
-        <Route path="/" element={<Navigate to={"/Home"} replace />} />
-      </Routes>
-      <div>
-        <Link to={"/Home"}>
+      <div id="header">
+        <h1>CameLION</h1>
+      </div>
+      <div id={ 'page' }>
+        <Routes>
+          <Route path={ '/Home' } element={ <Home /> } />
+          <Route path={ '/tab2' } element={ <Tab2 /> } />
+          <Route path={ '/tab3' } element={ <Tab3 /> } />
+          <Route path={ '/' } element={ <Navigate to={ '/Home' } replace /> } />
+        </Routes>
+      </div>
+      <div id={ 'footer' }>
+        <Link to={ '/Home' }>
           <HomeMax />
           <span>Home</span>
         </Link>
-        <Link to={"/tab2"}>
+        <Link to={ '/tab2' }>
           <Icecream />
           <span>Tab 2</span>
         </Link>
-        <Link to={"/tab3"}>
+        <Link to={ '/tab3' }>
           <CakeRounded />
           <span>Tab 3</span>
         </Link>

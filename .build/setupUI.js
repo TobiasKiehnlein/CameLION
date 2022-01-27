@@ -16,7 +16,7 @@ function execAsync(command) {
   });
 }
 
-(async function () {
+(async function() {
   // Actual script:
   // Check requirements
   await execAsync("yarn --version").catch((error) => {
@@ -25,11 +25,11 @@ function execAsync(command) {
   const output = await execAsync("node --version").catch((error) => {
     console.error("node not installed");
   });
-  if (!output.match(/14\.\d+\.\d+/)) {
-    console.log(output);
-    console.error("node version must be 14.x");
-    success = false;
-  }
+  // if (!output.match(/14\.\d+\.\d+/)) {
+  //   console.log(output);
+  //   console.error("node version must be 14.x");
+  //   success = false;
+  // }
 
   if (!success) process.exit(1);
 

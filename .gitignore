@@ -1,3 +1,5 @@
 # XournalPP
 **/*.autosave.xopp
 **/*.xopp~
+
+.parcel-cache/
