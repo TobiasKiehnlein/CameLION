@@ -11,7 +11,13 @@ const Tab3: React.FC = () => {
         <span>Tab 2</span>
       </div>
       <div>
-        <Button onClick={async () => (await loadWasm())?.greet()} />
+        <Button
+          onClick={async () => {
+            let wasm = await loadWasm();
+            let result = await wasm?.greet();
+            console.log("reee" + result);
+          }}
+        />
       </div>
     </div>
   );

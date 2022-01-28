@@ -1,13 +1,25 @@
-import init, { InitOutput, initThreadPool } from "came-lion-web-gl";
+import init, { greet, initThreadPool } from "came-lion-web-gl";
 import * as Comlink from "comlink";
 
-export class Initializer {
-  async init(num_threads: number) {
-    wasm = await init();
-    await initThreadPool(num_threads);
-  }
+export function customAlert(str: string) {
+  proxyAlertFunction(str);
 }
 
-let wasm: InitOutput | Initializer = new Initializer();
+export function log(str: string) {
+  console.log(str);
+}
 
-Comlink.expose(wasm);
+let proxyAlertFunction: any;
+
+export const wasmWorker = {
+  async init(num_threads: number, f: any) {
+    await init();
+    await initThreadPool(num_threads);
+    proxyAlertFunction = f;
+  },
+  greet() {
+    return greet();
+  },
+};
+
+Comlink.expose(wasmWorker);
