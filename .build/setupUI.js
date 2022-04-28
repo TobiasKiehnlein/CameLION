@@ -16,7 +16,7 @@ function execAsync(command) {
   });
 }
 
-(async function() {
+(async function () {
   // Actual script:
   // Check requirements
   await execAsync("yarn --version").catch((error) => {
@@ -35,6 +35,8 @@ function execAsync(command) {
 
   const cdUI = "cd ../CameLION_TS_UI";
   const cdWebGl = "cd ../CameLION_Rust_WebGl";
+  const cdMTTesting = "cd ../CameLION_Rust_MT_Testing";
+  const cdThreadrrExample = "cd ../../async-threadrr/examples/wasm";
   // Install/update packages
   console.log("Installing packages...");
   await execAsync(`${cdUI}; yarn`);
@@ -44,9 +46,15 @@ function execAsync(command) {
   // Build Rust_WebGl to be able to link it into the UI
   console.log("Building WASM...");
   await execAsync(`${cdWebGl}; wasm-pack build --target web`);
+  await execAsync(`${cdMTTesting}; wasm-pack build --target web`);
+  await execAsync(`${cdThreadrrExample}; wasm-pack build --target web`);
   // Link Rust_WebGl into the UI
   console.log("Linking WASM...");
   await execAsync(`${cdWebGl}/pkg; yarn link`);
   await execAsync(`${cdUI}; yarn link came-lion-web-gl`);
+  await execAsync(`${cdMTTesting}/pkg; yarn link`);
+  await execAsync(`${cdUI}; yarn link came-lion-mt-testing`);
+  await execAsync(`${cdThreadrrExample}/pkg; yarn link`);
+  await execAsync(`${cdUI}; yarn link threadrr-wasm-example`);
   console.log("DONE! --> UI can now be built!");
 })();

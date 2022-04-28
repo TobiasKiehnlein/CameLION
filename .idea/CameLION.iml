@@ -10,10 +10,17 @@
         url="file://$MODULE_DIR$/CameLION_Rust_WebGl/tests"
         isTestSource="true"
       />
+      <sourceFolder
+        url="file://$MODULE_DIR$/CameLION_Rust_MT_Testing/src"
+        isTestSource="false"
+      />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/CameLION_Rust_WebGl/target" />
+      <excludeFolder
+        url="file://$MODULE_DIR$/CameLION_Rust_MT_Testing/target"
+      />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
