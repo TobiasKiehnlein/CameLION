@@ -16,7 +16,7 @@ initWasm().then(
     console.error("Error initializing wasm: " + error);
     document
       .getElementById("root")
-      ?.append("Error initializing wasm: " + error);
+      ?.append("Error initializing wasm: " + error + "\nStack: " + error.stack);
   }
 );
 

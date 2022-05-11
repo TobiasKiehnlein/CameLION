@@ -1,9 +1,12 @@
 {
-	"name": "build",
-	"version": "1.0.0",
-	"scripts": {
-		"setupUI": "node setupUI.js",
-		"setupWASM": "node setupWASM.js",
-		"triggerRefresh": "node triggerRefresh.js"
-	}
+  "name": "build",
+  "version": "1.0.0",
+  "scripts": {
+    "setupUI": "node setupUI.js",
+    "setupRust": "node setupRust.js",
+    "buildWasm": "node buildWasm.js",
+    "linkWasm": "node linkWasm.js",
+    "buildAndLinkWasm": "node buildWasm.js; node linkWasm.js"
+  },
+  "type": "module"
 }

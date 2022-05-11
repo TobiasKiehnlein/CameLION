@@ -3,6 +3,7 @@ import React from "react";
 import { IconToggle } from "../components/IconToggle";
 import { AppsRounded, ListRounded } from "@mui/icons-material";
 import { Button } from "@mui/material";
+import { test, alert_me_thread, alert_me } from "threadrr-wasm-example";
 
 const Toolbar = () => (
   <>
@@ -23,7 +24,20 @@ const Home: React.FC = () => {
       <div>
         <Toolbar />
       </div>
-      <div></div>
+      <div>
+        <Button
+          onClick={async () => {
+            await test();
+          }}
+        />
+      </div>
+      <div>
+        <Button
+          onClick={async () => {
+            await alert_me_thread("lelelel");
+          }}
+        />
+      </div>
     </div>
   );
 };

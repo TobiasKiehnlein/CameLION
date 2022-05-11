@@ -1,19 +1,6 @@
-const { exec } = require("child_process");
+import { execAsync } from "./utils.js";
 
 let success = true;
-function execAsync(command) {
-  return new Promise((resolve, reject) => {
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        console.error(stderr);
-        success = false;
-        reject(error);
-      } else {
-        resolve(stdout);
-      }
-    });
-  });
-}
 
 (async function () {
   // Actual script:

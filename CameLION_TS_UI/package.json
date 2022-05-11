@@ -25,11 +25,14 @@
     "@mui/icons-material": "^5.3.1",
     "@mui/material": "^5.3.1",
     "@mui/styles": "^5.3.0",
+    "came-lion-mt-testing": "file:../CameLION_Rust_MT_Testing/pkg",
+    "came-lion-web-gl": "file:../CameLION_Rust_WebGl/pkg",
     "comlink": "^4.3.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router": "^6.2.1",
     "react-router-dom": "^6.2.1",
+    "threadrr-wasm-example": "file:../../async-threadrr/examples/wasm/pkg",
     "wasm-feature-detect": "^1.2.11"
   },
   "scripts": {
